@@ -1,0 +1,271 @@
+/* ===========================
+🌐 General Styles
+=========================== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9fafc;
+}
+
+/* ===========================
+🛠️ Header
+=========================== */
+header {
+    background: linear-gradient(90deg, #f4a261, #e76f51);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* ===========================
+🕒 Store Hours Management
+=========================== */
+#store-hours {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#store-hours h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #264653;
+}
+
+#store-hours-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#store-hours-form label {
+    font-weight: bold;
+}
+
+#store-hours-form input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#store-hours-form button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#store-hours-form button:hover {
+    background-color: #21867a;
+}
+
+/* ===========================
+📅 Booking Management
+=========================== */
+#booking {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#booking h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #264653;
+}
+
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#booking-form label {
+    font-weight: bold;
+}
+
+/* 💼 Service Selection */
+.services-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.services-selection label {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.services-selection label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.services-selection label:hover {
+    background-color: #e6f7ff;
+}
+
+/* 📆 Date and Slot Dropdown */
+#booking-form input[type="date"],
+#booking-form select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* ⏰ Availability Dropdown */
+#available-slots {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#available-slots:focus {
+    border-color: #2a9d8f;
+}
+
+/* ✅ Submit Button */
+#booking-form button {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#booking-form button:hover {
+    background-color: #f4a261;
+}
+
+/* ===========================
+📆 Calendar Timeline
+=========================== */
+#calendar-container {
+    margin: 30px auto;
+    max-width: 1200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#calendar {
+    padding: 20px;
+    min-height: 500px;
+}
+
+.fc-toolbar-title {
+    font-size: 1.5em;
+    color: #264653;
+}
+
+.fc .fc-button-primary {
+    background-color: #2a9d8f;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #21867a;
+}
+
+.fc-timeGridDay-view .fc-event {
+    border-left: 3px solid #e76f51;
+    background-color: #f4a261;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+/* ===========================
+📝 Modal for Edit/Delete Booking
+=========================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #264653;
+}
+
+.modal-header .close {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #e63946;
+}
+
+/* ===========================
+📱 Responsive Design
+=========================== */
+@media (max-width: 768px) {
+    .services-selection {
+        grid-template-columns: 1fr;
+    }
+}

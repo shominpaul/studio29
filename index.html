@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 29 - Hair & Aesthetics Salon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 🧠 Header Section -->
+    <header>
+        <h1>Studio 29</h1>
+        <p>Experience beauty at its finest</p>
+        <nav>
+            <button onclick="showBooking()">📅 Book Now</button>
+            <button onclick="showWorks()">🎓 Our Works</button>
+        </nav>
+    </header>
+
+    <!-- 💼 Services Section -->
+    <main>
+        <section id="services">
+            <h2>💼 Our Services</h2>
+            <div class="service-grid">
+                <div><strong>✂️ Hair Cut:</strong> Stylish cuts tailored to you.</div>
+                <div><strong>🎨 Hair Colour:</strong> Vibrant and long-lasting colors.</div>
+                <div><strong>🧖 Waxing:</strong> Smooth, silky skin effortlessly.</div>
+                <div><strong>💄 Threading:</strong> Precision shaping for a flawless look.</div>
+            </div>
+        </section>
+
+        <!-- 📅 Booking Section -->
+        <section id="booking" class="hidden">
+            <h2>📅 Book an Appointment</h2>
+            <form id="booking-form">
+                <!-- 📆 Date Picker -->
+                <label for="date">📆 Select Date:</label>
+                <input type="date" id="date" required>
+
+                <!-- 💼 Services Selection -->
+                <label>💼 Select Services:</label>
+                <div class="services-selection">
+                    <label><input type="checkbox" id="service-haircut" value="Hair Cut"> Hair Cut (30 min)</label><br>
+                    <label><input type="checkbox" id="service-haircolour" value="Hair Colour"> Hair Colour (60 min)</label><br>
+                    <label><input type="checkbox" id="service-waxing" value="Waxing"> Waxing (30 min)</label><br>
+                    <label><input type="checkbox" id="service-threading" value="Threading"> Threading (30 min)</label><br>
+                </div>
+
+                <!-- ⏰ Time Slot Dropdown -->
+                <label for="available-slots">⏰ Select Available Slot:</label>
+                <select id="available-slots" required>
+                    <option value="">Select an available slot</option>
+                </select>
+
+                <!-- 📝 User Information -->
+                <label for="name">👤 Full Name:</label>
+                <input type="text" id="name" placeholder="Your Full Name" required>
+
+                <label for="phone">📱 Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+                <label for="email">✉️ Email Address:</label>
+                <input type="email" id="email" placeholder="Your Email Address" required>
+
+                <!-- ✅ Submit Button -->
+                <button type="submit">✅ Secure Booking</button>
+            </form>
+        </section>
+
+        <!-- 🎓 Our Works Section -->
+        <section id="works" class="hidden">
+            <h2>🎓 Our Works</h2>
+            <div class="gallery">
+                <img src="work1.jpg" alt="Work 1">
+                <img src="work2.jpg" alt="Work 2">
+                <img src="work3.jpg" alt="Work 3">
+            </div>
+        </section>
+    </main>
+
+    <!-- 📝 Footer Section -->
+    <footer>
+        <p>&copy; 2024 Studio 29. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

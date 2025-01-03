@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Owner Dashboard - Studio 29</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- FullCalendar CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+</head>
+<body>
+  <!-- 🛠️ Header Section -->
+  <header>
+    <h1>🛠️ Owner Dashboard</h1>
+    <p>Manage your salon with ease</p>
+  </header>
+
+  <main>
+    <!-- 🕒 Store Hours Management Section -->
+    <section id="store-hours">
+      <h2>🕒 Store Hours Management</h2>
+      <form id="store-hours-form">
+        <!-- 1) Date Picker -->
+        <label for="storeDate">Select Date:</label>
+        <input type="date" id="storeDate" required />
+
+        <!-- 2) Opening Hour -->
+        <label for="openingHour">Opening Hour:</label>
+        <input type="time" id="openingHour" />
+
+        <!-- 3) Closing Hour -->
+        <label for="closingHour">Closing Hour:</label>
+        <input type="time" id="closingHour" />
+
+        <!-- 4) Holiday Checkbox -->
+        <label for="isHoliday">Is Holiday?</label>
+        <input type="checkbox" id="isHoliday" />
+
+        <!-- 5) Submit Button -->
+        <button type="submit">Update Store Hours</button>
+      </form>
+    </section>
+
+    <!-- 📅 Book an Appointment Section -->
+    <section id="booking">
+      <h2>📅 Book an Appointment</h2>
+      <form id="booking-form">
+        <!-- 📆 Date Picker -->
+        <label for="date">📆 Select Date:</label>
+        <input type="date" id="date" required/>
+
+        <!-- 💼 Services Selection -->
+        <label>💼 Select Services:</label>
+        <div class="services-selection">
+          <label>
+            <input type="checkbox" id="service-haircut" value="Hair Cut" />
+            Hair Cut (30 min)
+          </label><br/>
+          <label>
+            <input type="checkbox" id="service-haircolour" value="Hair Colour" />
+            Hair Colour (60 min)
+          </label><br/>
+          <label>
+            <input type="checkbox" id="service-waxing" value="Waxing" />
+            Waxing (30 min)
+          </label><br/>
+          <label>
+            <input type="checkbox" id="service-threading" value="Threading" />
+            Threading (30 min)
+          </label><br/>
+        </div>
+
+        <!-- ⏰ Time Slot Dropdown -->
+        <label for="available-slots">⏰ Select Available Slot:</label>
+        <select id="available-slots" required>
+          <option value="">Select an available slot</option>
+        </select>
+
+        <!-- 📝 User Information -->
+        <label for="name">👤 Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Client's Full Name"
+          required
+        />
+
+        <label for="phone">📱 Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Client's Phone Number"
+          required
+        />
+
+        <label for="email">✉️ Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Client's Email Address"
+          required
+        />
+
+        <!-- ✅ Submit Button -->
+        <button type="submit">✅ Book Appointment</button>
+      </form>
+    </section>
+
+    <!-- 📆 Calendar Section -->
+    <section id="calendar-container">
+      <h2>📆 Calendar Overview</h2>
+      <div id="calendar"></div>
+    </section>
+
+    <!-- 📋 Booking Modal for Edit/Delete -->
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>📋 Edit Booking</h2>
+        <form id="modal-form">
+          <label for="modalName">👤 Name:</label>
+          <input type="text" id="modalName" required />
+
+          <label for="modalDate">📆 Date:</label>
+          <input type="date" id="modalDate" required />
+
+          <!-- Start/End Time -->
+          <label for="modalStartTime">⏰ Start Time:</label>
+          <input type="time" id="modalStartTime" required />
+
+          <label for="modalEndTime">⏰ End Time:</label>
+          <input type="time" id="modalEndTime" required />
+
+          <label for="modalPhone">📱 Phone Number:</label>
+          <input type="tel" id="modalPhone" required />
+
+          <label for="modalEmail">✉️ Email:</label>
+          <input type="email" id="modalEmail" required />
+
+          <!-- Buttons -->
+          <button type="submit">✅ Save Changes</button>
+          <button type="button" id="deleteBooking" class="delete-btn">🗑️ Delete Booking</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Studio 29. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="owner.js"></script>
+</body>
+</html>
